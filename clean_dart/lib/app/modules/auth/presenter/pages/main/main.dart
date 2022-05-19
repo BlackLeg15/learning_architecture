@@ -17,6 +17,7 @@ class _MainState extends State<Main> {
 
   var username = '';
   var password = '';
+  var isPasswordObscure = true;
 
   String? usernameError;
   String? passwordError;
@@ -79,8 +80,21 @@ class _MainState extends State<Main> {
                       ),
                       const SizedBox(height: 10),
                       TextField(
-                        decoration: InputDecoration(labelText: 'Senha', errorText: passwordError),
+                        decoration: InputDecoration(
+                            labelText: 'Senha',
+                            errorText: passwordError,
+                            suffixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    isPasswordObscure = !isPasswordObscure;
+                                  });
+                                },
+                                icon: Icon(
+                                  Icons.remove_red_eye,
+                                  color: isPasswordObscure ? Colors.grey : Colors.red,
+                                ))),
                         onChanged: onChangePassword,
+                        obscureText: isPasswordObscure,
                       ),
                       const SizedBox(height: 20),
                       ElevatedButton(
