@@ -1,4 +1,4 @@
-import '../../../../domain/usecases/username_with_email_and_password/entity/entity.dart';
+import '../../../../domain/usecases/login_with_username_and_password/entity/entity.dart';
 
 class MockMapper {
   Entity fromJson(Map json) {

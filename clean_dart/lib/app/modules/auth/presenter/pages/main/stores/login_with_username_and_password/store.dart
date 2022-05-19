@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-import '../../../../../domain/usecases/username_with_email_and_password/params.dart';
-import '../../../../../domain/usecases/username_with_email_and_password/usecase.dart';
+import '../../../../../domain/usecases/login_with_username_and_password/params.dart';
+import '../../../../../domain/usecases/login_with_username_and_password/usecase.dart';
 import 'states.dart';
 
 class Store extends ChangeNotifier {

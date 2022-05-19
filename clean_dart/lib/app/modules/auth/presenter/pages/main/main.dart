@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../../../domain/usecases/username_with_email_and_password/params.dart';
+import '../../../domain/usecases/login_with_username_and_password/params.dart';
 import 'controller.dart';
 import 'stores/login_with_username_and_password/states.dart';
 

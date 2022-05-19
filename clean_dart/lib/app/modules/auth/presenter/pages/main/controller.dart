@@ -1,4 +1,4 @@
-import '../../../domain/usecases/username_with_email_and_password/params.dart';
+import '../../../domain/usecases/login_with_username_and_password/params.dart';
 import 'stores/login_with_username_and_password/store.dart';
 
 class Controller {
