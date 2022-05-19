@@ -1,4 +1,4 @@
-import 'package:clean_dart/app/modules/auth/domain/usecases/username_with_email_and_password/entity/entity.dart';
+import '../../../../../domain/usecases/username_with_email_and_password/entity/entity.dart';
 
 abstract class StoreState {}
 

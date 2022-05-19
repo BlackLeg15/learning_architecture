@@ -1,7 +1,8 @@
-import 'package:clean_dart/app/modules/auth/domain/usecases/username_with_email_and_password/params.dart';
-import 'package:clean_dart/app/modules/auth/domain/usecases/username_with_email_and_password/usecase.dart';
-import 'package:clean_dart/app/modules/auth/presenter/pages/main/stores/login_with_username_and_password/states.dart';
 import 'package:flutter/cupertino.dart';
+
+import '../../../../../domain/usecases/username_with_email_and_password/params.dart';
+import '../../../../../domain/usecases/username_with_email_and_password/usecase.dart';
+import 'states.dart';
 
 class Store extends ChangeNotifier {
   StoreState _state = Initial();
