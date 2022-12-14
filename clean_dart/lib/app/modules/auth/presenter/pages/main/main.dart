@@ -75,31 +75,36 @@ class _MainState extends State<Main> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       TextField(
-                        decoration: InputDecoration(labelText: 'Nome de usuário', errorText: usernameError),
+                        decoration: InputDecoration(
+                          labelText: 'Nome de usuário',
+                          errorText: usernameError,
+                        ),
                         onChanged: onChangeUsername,
                       ),
                       const SizedBox(height: 10),
                       TextField(
                         decoration: InputDecoration(
-                            labelText: 'Senha',
-                            errorText: passwordError,
-                            suffixIcon: IconButton(
-                                onPressed: () {
-                                  setState(() {
-                                    isPasswordObscure = !isPasswordObscure;
-                                  });
-                                },
-                                icon: Icon(
-                                  Icons.remove_red_eye,
-                                  color: isPasswordObscure ? Colors.grey : Colors.red,
-                                ))),
+                          labelText: 'Senha',
+                          errorText: passwordError,
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              setState(() {
+                                isPasswordObscure = !isPasswordObscure;
+                              });
+                            },
+                            icon: Icon(
+                              Icons.remove_red_eye,
+                              color: isPasswordObscure ? Colors.grey : Colors.red,
+                            ),
+                          ),
+                        ),
                         onChanged: onChangePassword,
                         obscureText: isPasswordObscure,
                       ),
                       const SizedBox(height: 20),
                       ElevatedButton(
                         onPressed: () {
-                          if (usernameError != null || passwordError != null) return;
+                          if (password.isEmpty || username.isEmpty || usernameError != null || passwordError != null) return;
                           _controller.loginWithUsernameAndPassword(
                             Params(username: username, password: password),
                           );
@@ -128,7 +133,7 @@ class _MainState extends State<Main> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     backWidget,
-                    Text(state.message)
+                    Text(state.message),
                   ],
                 ),
               );
